@@ -1,0 +1,13 @@
+<% if(auth_status) { %>
+  <a href="/logout">
+    <div class="btn logout-btn">
+      <p>LOGOUT</p>
+    </div>
+  </a>
+  <% } else { %>
+  <a href="/auth/github">
+    <div class="btn login-btn">
+      <p>LOGIN WITH GITHUB</p>
+    </div>
+  </a>
+<% } %>
