@@ -18,6 +18,7 @@ mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGO_URI);
 
 app.use('/controllers', express.static(process.cwd() + '/app/controllers'));//CHECK add paths
+app.use('/client_js', express.static(process.cwd() + '/app/views/main'));
 
 app.use(bodyParser.urlencoded({
     extended: true

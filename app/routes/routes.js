@@ -25,4 +25,10 @@ module.exports = function(app, passport) {
             successRedirect: default_route,
             failureRedirect: default_route
         }));
+
+    app.route('/favicon.ico')
+        .get(function(req, res) {
+            console.log('piss off, favicon!');
+            res.end('piss off, favicon!');
+        });
 };

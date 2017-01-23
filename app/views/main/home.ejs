@@ -1,7 +1,18 @@
 
 <% include ../shared/header %>
 
-<h1>Home Page</h1>
+<h1>Stock Market</h1>
+
+<div id="graph-container"></div>
+<br>
+<div id="added-stocks-container"><h3>Markets in place(WS buttons with 'X' option)</h3></div>
+<br>
+<input type="text" id="new-stock-input" name="new-stock-value" placeholder="Enter stock market name">
+<button type="button" id="new-stock-button" disabled>Add Stock</button>
+<br>
+<div id="flash_message"></div>
+
+<script type="text/javascript" src="client_js/home.js"></script>
 
 <% include ../shared/footer %>
 
