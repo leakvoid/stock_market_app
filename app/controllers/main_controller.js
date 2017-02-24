@@ -7,12 +7,12 @@ var mongoose = require('mongoose');
 var request = require('request');
 
 var WebSocketServer = require('ws').Server;
-var wss = new WebSocketServer({ port: 3000 });
 
-//var WebSocket = require('ws');
-//var ws = new WebSocket('ws://127.0.0.1/');
+function MainController(app) {
 
-function MainController() {
+    var server = require('http').createServer(app);
+    server.listen(3000);
+    var wss = new WebSocketServer({ server: server });
 
     /*this.home = function(req, res) {
         var stock = 'MMM';

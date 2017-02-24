@@ -6,7 +6,7 @@ var default_route = '/';
 
 module.exports = function(app, passport) {
 
-    var main_controller = new MainController();
+    var main_controller = new MainController(app);
 
     app.route('/')
         .get(main_controller.home);
