@@ -7,7 +7,7 @@ var mongoose = require('mongoose');
 var request = require('request');
 
 var WebSocketServer = require('ws').Server;
-var wss = new WebSocketServer({ port: 8080 });
+var wss = new WebSocketServer({ port: 3000 });
 
 //var WebSocket = require('ws');
 //var ws = new WebSocket('ws://127.0.0.1/');
