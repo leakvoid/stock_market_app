@@ -16,7 +16,12 @@ $(document).ready( function() {
       }
     */
 
-    var socket = new WebSocket('ws://localhost:3000');
+    function get_domain_name(hostName)
+    {
+        return hostName.substring(hostName.lastIndexOf(".", hostName.lastIndexOf(".") - 1) + 1);
+    }
+
+    var socket = new WebSocket('ws://' + get_domain_name(window.location.hostname) + ':3000'); // 'ws://localhost:3000'
     var added_stock_names = [];
     google.charts.load('current', {packages: ['corechart', 'line']});
 
