@@ -17,7 +17,7 @@ $(document).ready( function() {
     */
 
     var ws_prefix = (window.location.protocol == 'http:' ? 'ws://' : 'wss://');
-    var socket = new WebSocket(ws_prefix + window.location.hostname + ':3000'); // 'ws://localhost:3000'
+    var socket = new WebSocket(ws_prefix + window.location.hostname + ':8080'); // 'ws://localhost:3000'
     var added_stock_names = [];
     google.charts.load('current', {packages: ['corechart', 'line']});
 
