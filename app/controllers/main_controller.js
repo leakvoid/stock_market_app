@@ -10,7 +10,7 @@ var WebSocketServer = require('ws').Server;
 
 function MainController(app) {
 
-    var server = require('http').createServer(app);
+    var server = require('https').createServer(app);
     server.listen(3000);
     var wss = new WebSocketServer({ server: server });
 
